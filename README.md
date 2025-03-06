@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/courses/cna-full/753b22b0-f3d8-11ef-82c0-d1cecf27046d/compensation-2024
+www.msaez.io/#/65219386/storming/compensation-2
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -37,7 +37,7 @@ mvn spring-boot:run
 ```
 - inventory
 ```
- http :8088/inventories id="id"stock="stock"
+ http :8088/inventories id="id"stock="stock"orderId="orderId"
 ```
 
 

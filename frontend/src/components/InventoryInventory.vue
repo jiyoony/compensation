@@ -17,6 +17,7 @@
 
         <v-card-text style="background-color: white;">
             <Number label="Stock" v-model="value.stock" :editMode="editMode" :inputUI="''"/>
+            <Number label="OrderId" v-model="value.orderId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">

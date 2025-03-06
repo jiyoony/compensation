@@ -2,6 +2,7 @@ package compensation.domain;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import compensation.InventoryApplication;
+import compensation.domain.OutOfStock;
 import compensation.domain.StockDecreased;
 import java.time.LocalDate;
 import java.util.Date;
@@ -22,6 +23,8 @@ public class Inventory {
 
     private Long stock;
 
+    private Long orderId;
+
     public static InventoryRepository repository() {
         InventoryRepository inventoryRepository = InventoryApplication.applicationContext.getBean(
             InventoryRepository.class
@@ -39,6 +42,8 @@ public class Inventory {
 
         StockDecreased stockDecreased = new StockDecreased(inventory);
         stockDecreased.publishAfterCommit();
+        OutOfStock outOfStock = new OutOfStock(inventory);
+        outOfStock.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -51,6 +56,8 @@ public class Inventory {
 
             StockDecreased stockDecreased = new StockDecreased(inventory);
             stockDecreased.publishAfterCommit();
+            OutOfStock outOfStock = new OutOfStock(inventory);
+            outOfStock.publishAfterCommit();
 
          });
         */
